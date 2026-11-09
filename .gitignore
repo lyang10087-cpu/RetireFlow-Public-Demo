@@ -1,0 +1,11 @@
+.env
+.env.*
+.venv/
+**/secrets.toml
+*.pem
+*.key
+*.log
+__pycache__/
+.pytest_cache/
+work/
+*.ndjson

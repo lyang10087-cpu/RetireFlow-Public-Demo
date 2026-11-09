@@ -1,0 +1,17 @@
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
+
+[server]
+headless = true
+fileWatcherType = "none"
+enableStaticServing = false
+
+[secrets]
+files = []
+
+[theme]
+base = "light"
+primaryColor = "#086259"

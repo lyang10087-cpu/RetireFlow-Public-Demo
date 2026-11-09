@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="820" viewBox="0 0 1440 820" role="img" aria-labelledby="title desc">
+  <title id="title">RetireFlow 系统架构</title>
+  <desc id="desc">Codex 支持开发与测试。运行时由 Streamlit、代码型 Agent 和飞书协作，默认演示使用固定识别并只读，真实写入经过人工确认与三字段白名单。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+      <path d="M1 1 L9 5 L1 9 Z" fill="#546879"/>
+    </marker>
+    <style>
+      text { font-family: 'Microsoft YaHei', 'Noto Sans CJK SC', 'PingFang SC', sans-serif; fill: #142d40; }
+      .h1 { font-size: 38px; font-weight: 700; }
+      .h2 { font-size: 27px; font-weight: 700; }
+      .body { font-size: 20px; }
+      .meta { font-size: 17px; fill: #40566a; }
+      .label { font-size: 16px; font-weight: 700; letter-spacing: 1px; fill: #086259; }
+      .line { stroke: #546879; stroke-width: 2.5; marker-start: url(#arrow); marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1440" height="820" rx="24" fill="#f4f7f8"/>
+  <text class="label" x="48" y="49">项目作品集 · 人事材料预审</text>
+  <text class="h1" x="48" y="96">RetireFlow 系统架构</text>
+  <text class="body" x="48" y="130">从虚构材料、档案比对到飞书预审与人工复核</text>
+
+  <g id="codex">
+    <rect x="48" y="164" width="1344" height="108" rx="16" fill="#eef2f6" stroke="#9baebf" stroke-width="2" stroke-dasharray="8 6"/>
+    <text class="label" x="72" y="196">开发与测试</text>
+    <text class="h2" x="72" y="236">Codex</text>
+    <text class="body" x="324" y="214">协助实现 Agent 与 Streamlit</text>
+    <text class="meta" x="324" y="242">编写确认门禁及离线回归测试</text>
+    <text class="body" x="846" y="214">复核 DEV 查询与审核证据</text>
+    <text class="meta" x="846" y="242">准备演示脚本与验收记录</text>
+  </g>
+
+  <text class="label" x="48" y="315">运行时组件</text>
+  <g id="streamlit">
+    <rect x="48" y="338" width="324" height="276" rx="18" fill="#fff" stroke="#bccbd7" stroke-width="2"/>
+    <text class="h2" x="72" y="382">Streamlit</text>
+    <text class="label" x="72" y="412">展示与人工交互</text>
+    <text class="body" x="72" y="466"><tspan x="72">材料预览 · 三案切换</tspan><tspan x="72" dy="42">原值、基准与拟写入值</tspan><tspan x="72" dy="42">本地确认 · 证据来源标签</tspan></text>
+  </g>
+  <g id="ui-agent-connector">
+    <text class="meta" x="414" y="430" text-anchor="middle">交互</text>
+    <line class="line" x1="380" y1="452" x2="448" y2="452"/>
+  </g>
+  <g id="agent">
+    <rect x="456" y="338" width="488" height="276" rx="18" fill="#fff" stroke="#78a99f" stroke-width="2"/>
+    <text class="h2" x="480" y="382">RetireFlow Agent · Python</text>
+    <rect x="480" y="404" width="440" height="48" rx="10" fill="#e9f5f2"/>
+    <text class="body" x="496" y="435">演示 · 固定识别结果与模拟轨迹</text>
+    <rect x="480" y="462" width="440" height="48" rx="10" fill="#edf2f9"/>
+    <text class="body" x="496" y="493">真实模式 · Responses API 工具选择</text>
+    <text class="body" x="480" y="553"><tspan x="480">档案唯一匹配、字段比对、确认门禁</tspan><tspan class="meta" x="480" dy="30">公开入口只读取随附脱敏快照</tspan></text>
+  </g>
+  <g id="agent-feishu-connector">
+    <text class="meta" x="986" y="430" text-anchor="middle">本地 API</text>
+    <line class="line" x1="952" y1="452" x2="1020" y2="452"/>
+  </g>
+  <g id="feishu">
+    <rect x="1028" y="338" width="364" height="276" rx="18" fill="#fff" stroke="#bccbd7" stroke-width="2"/>
+    <text class="h2" x="1052" y="382">飞书多维表格 · 本地版</text>
+    <text class="label" x="1052" y="412">业务数据与自动化</text>
+    <text class="body" x="1052" y="466"><tspan x="1052">档案、材料与审核记录</tspan><tspan x="1052" dy="42">V2 公式与材料完整性</tspan><tspan x="1052" dy="42">HR 按钮触发与日志归档</tspan></text>
+  </g>
+
+  <g id="evidence-boundary">
+    <rect x="48" y="653" width="1344" height="118" rx="16" fill="#e9f5f2"/>
+    <text class="label" x="72" y="685">确认与验收边界</text>
+    <text class="body" x="72" y="721">公开展示 · 预设识别与模拟工具轨迹 · 随附脱敏快照 · 本地会话确认</text>
+    <text class="body" x="72" y="750">本地真实模式设计 · 人工确认 → 三字段白名单 → 按记录 ID 回读 · 端到端待验收</text>
+  </g>
+</svg>
