@@ -35,5 +35,8 @@ python -m venv .venv
 
 备用平台使用 Hugging Face Docker Spaces 运行同一份应用。选择 Docker SDK，在 Space 中以 `python:3.11-slim` 安装 `requirements.txt`，用 `streamlit run app.py --server.address 0.0.0.0 --server.port 7860` 启动，并在 Space 配置中指定 `app_port: 7860`。只有 Community Cloud 无法使用时才准备这个容器。GitHub Pages 静态版留待 Python 托管均不可用时评估。 [Docker Spaces 文档](https://huggingface.co/docs/hub/spaces-sdks-docker)
 
-公开演示链接 · 待发布  
+公开演示 · [在线体验（免登录）](https://retireflow-public-demo.streamlit.app/)
+
 GitHub 仓库 · [RetireFlow-Public-Demo](https://github.com/lyang10087-cpu/RetireFlow-Public-Demo)
+
+2026-11-10 在未登录的 Edge 无痕会话中验证了 A、B、C、确认后刷新和 HR 历史示例。当前 Community Cloud 实例使用 Python 3.14.10、Streamlit 1.67.0，Secrets 为空。公开版业务路径使用随附材料和预设模型输出。托管平台可产生访问统计请求。
